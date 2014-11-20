@@ -26,10 +26,11 @@ int main(){
     
     cout<<"---------------------"<<endl;
     
-    for(int i2=0; i2<i; i2++){
+    for(int y=0; y<=10000; y++){
             
-            for(int y=0; y<=10000; y++){
-                    
+            
+                 for(int i2=0; i2<i; i2++){
+            
                                 if(year[i2]==y){
             
                                                     cout<<st[i2]<<" "<<year[i2]<<endl;
