@@ -9,8 +9,8 @@ struct g{
       char name[10];
       char patronymic[16];
       int year;
-      char month[20];
-      int den;
+      int month;
+      int day;
 }sg[19];
 
 
