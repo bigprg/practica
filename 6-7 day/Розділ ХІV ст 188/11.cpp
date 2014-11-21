@@ -8,7 +8,7 @@ int main (){
 
        int a[512], N, m; 
         
-       srand(time(0));     
+       srand(time(0));   
        
   FILE * f;
   
