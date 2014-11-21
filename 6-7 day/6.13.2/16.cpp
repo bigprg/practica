@@ -1,11 +1,14 @@
 #include <iostream>
 #include <conio.h>
 #include <stdio.h>
+#include <locale.h>
 
 using namespace std;
 
 int main (){
-
+         
+         setlocale( LC_ALL,"Russian" );
+         
        char a;
        int i=97, j=122, k=0, l=64, s=0, p=0, h=0;
                 

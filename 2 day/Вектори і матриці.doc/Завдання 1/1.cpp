@@ -28,7 +28,7 @@ int main(){
              
              for(int i=0; i<m; i++){
              
-               A[i]= rand() % 100;       
+               A[i]= rand() % 10;       
                cout<<"A["<<i<<"] = "<<A[i]<<endl;
              }
              

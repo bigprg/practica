@@ -32,8 +32,8 @@ int main (){
     for(int i=0; i<10; i++){
     
             sg[i].year = 1995 + rand() % 4 ;
-            sg[i].month = rand () % 12;
-            sg[i].day = rand () % 31;
+            sg[i].month = 1 +  rand () % 10;
+            sg[i].day = 1 + rand () % 30;
             
             cout<<sg[i].name<<" "<<sg[i].family<<" "<<sg[i].patronymic<<endl;
             cout<<sg[i].day<<"."<<sg[i].month<<"."<<sg[i].year<<endl;

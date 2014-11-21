@@ -113,7 +113,7 @@ int main(){
        printf("\n\n-----\n");
        printf("Result: File #3\n");
       
-   	   for(unsigned long int i=0; i<=N1+N2-1; i++){
+   	   for(unsigned long int i=1; i<=N1+N2; i++){
                     
            fprintf(f3, "%d", c[i]);
            cout<<c[i]<<" ";
