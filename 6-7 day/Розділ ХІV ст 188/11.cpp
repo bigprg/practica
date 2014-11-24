@@ -1,37 +1,54 @@
 #include <iostream>
 #include <conio.h>
-#include <stdio.h>
+#include <fstream>
 
 using namespace std;
 
 int main (){
 
-       int a[512], N, m; 
+       int c, m; 
         
        srand(time(0));   
+        
+       ofstream out("11.txt");
        
-  FILE * f;
-  
-       f = fopen("11.txt", "w"); 
-       printf("Input count numbers\nN ");
-       scanf("%d", &N);
-       printf("Number at file\n");
-              
-              for (int i = 0; i < N; i++) { 
-                   a[i] = rand () % 9;
-                   fprintf ( f, "%d", a[i] );
-                   printf ( "%d ", a[i] );
-               } 
+       cout<<"Input counts number ";
+       cin>>c;
+       
+       for(int i=0; i<c; i++){
                
+               out<<rand()%9;
+               out<<"\n";
+       
+       }
+       
+       out.close();
+       
+       int a[c];
+       
+       ifstream in("11.txt");
+
+       for(int i=0; i<c; i++){
+                 
+	     in>>a[i];
+	     cout<<a[i]<<" ";
+
+	     
+	   }
+	   
+       in.close();
+       
+       
+
        printf("\nNum element\nn=");
        scanf("%d", &m );
        printf("\nFirst element %d", a[0]);
        printf("\nThird element %d", a[2]);
        printf("\nn  element %d", a[m-1]);
-       printf("\nLast element %d", a[N-1]);
+       printf("\nLast element %d", a[c-1]);
        
-       fclose(f);   
+  
        
-       getch ();
+       getch();
        return 0;
 }

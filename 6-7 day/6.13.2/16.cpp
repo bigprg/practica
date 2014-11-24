@@ -1,27 +1,34 @@
 #include <iostream>
 #include <conio.h>
-#include <stdio.h>
+#include <fstream>
 #include <locale.h>
 
 using namespace std;
 
 int main (){
          
-         setlocale( LC_ALL,"Russian" );
-         
-       char a;
+       setlocale(LC_ALL,"Russian");
+
        int i=97, j=122, k=0, l=64, s=0, p=0, h=0;
-                
-       FILE * f;
-       f = fopen("16.txt", "r"); 
-       printf ("String\n");
        
+       char text[256], a;
        
+       ofstream out("16.txt");
        
-       while(!feof(f)){
-       fscanf (f, "%c", &a);
-       printf ("%c", a);
-              if ((a>=i) && (a<=j)){
+       cout<<"Input string\n";
+       
+       out<<gets(text);
+       
+       out.close();
+       
+       ifstream in("16.txt");
+
+       while(!in.eof()){
+                 
+	     in>>a;
+	     //cout<<a<<" ";
+         
+         if ((a>=i) && (a<=j)){
                          
                  s++;
               
@@ -38,7 +45,10 @@ int main (){
                   }
                   
               }
-       }   
+	     
+	   }
+	   
+       in.close();
        
        if(p<s){
        
@@ -53,8 +63,6 @@ int main (){
               cout<<"\nThe number of characters equal";
        
        }
-       
-       fclose(f);   
        
        getch();
        return 0;

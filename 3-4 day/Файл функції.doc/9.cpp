@@ -20,6 +20,7 @@ int main(){
     if ((a<0) || (b<0) || (c<0) || (d<0)){
     
        cout<<"Negative numbers are prohibited";
+       
     }else{
     
        func9(a,b,c,d);        

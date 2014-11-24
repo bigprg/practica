@@ -1,6 +1,6 @@
+#include <iostream>
 #include <conio.h>
-#include <stdio.h>
-#include <stdlib.h>
+#include <fstream>
 #include <time.h>
 
 using namespace std;
@@ -9,28 +9,39 @@ int main (){
          
        srand(time(0));
          
-       int a[1000], N, r; 
-                
-       FILE * f;
-       f = fopen ("14.txt", "w"); 
+       int c, r, t; 
        
-       printf("Input count numbers\nN ");
-       scanf("%d", &N);
+       ofstream out("14.txt");
        
-       printf ("Numbers at file\n");
+       cout<<"Input counts number ";
+       cin>>c;
        
-       for(int i=0; i<N; i++){
-           
-           a[i] = rand() % 9;
-           fprintf (f, "%d", a[i]);
-           printf ("%d ", a[i]);
+       for(int i=0; i<c; i++){
+               
+               out<<rand()%9;
+               out<<"\n";
        
-       }   
+       }
        
-       r=a[0]-a[N-1];
-       printf("\nDifference %d", r);
+       out.close();
        
-       fclose(f);   
+       int a[c];
+       
+       ifstream in("14.txt");
+
+       for(int i=0; i<c; i++){
+                 
+	     in>>a[i];
+	     cout<<a[i]<<" ";
+
+	     
+	   }
+	   
+       in.close();
+       
+       r=a[0]-a[c-1];
+       
+       cout<<"\nDifference "<<r;
        
        getch();
        return 0;

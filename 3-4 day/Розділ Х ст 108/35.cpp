@@ -4,15 +4,13 @@
 
 using namespace std;
 
-long double p(double a, double b, double h)
-{
+long double p(double a, double b, double h){
        long double p;
        p=a+b+2*(sqrt(((pow(h,2))-(pow((a-b),2)))/4));
        return p;
 }
 
-long double s(double a, double b, double h)
-{
+long double s(double a, double b, double h){
        long double s;
        s=((a+b)/2)*h;
        return s;

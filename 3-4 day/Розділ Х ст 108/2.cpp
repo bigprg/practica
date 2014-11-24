@@ -28,17 +28,16 @@ double f3 (double n1, double n2){
        
 }
 
-double f4 (double n1, double n2){
+long double f4 (double n1, double n2){
        
-       double y;
+       long double y;
        y=(sin(n1)+n2)/(sin(n2)+n1);
        return y;
 
 }
 
 
-int main ()
-{
+int main(){
 
     double n1, n2, n3, n4, n5, n6, a, b, c, g;
     

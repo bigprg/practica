@@ -7,7 +7,7 @@ using namespace std;
 char fTab(char* a){ 
     
 
-    int t=9,p;
+    int t=9, p;
     cout<<endl<<"Space size ";
     cin>>p; 
        for (int i=0; i<=strlen(a); i++)
@@ -18,16 +18,14 @@ char fTab(char* a){
                        {
                        cout<<" ";
                        }
-                }
-                else
-                {
+                }else{
                     cout<<a[i];}
                 }     
 }
 int main (){
     
     cout<<"Input row and use TAB"<<endl;
-    char a[255]; 
+    char a[1024]; 
     gets(a);
     fTab(a);
         

@@ -1,54 +1,71 @@
 #include <iostream>
 #include <conio.h>
-#include <stdio.h>
+#include <fstream>
 
 using namespace std;
 
 int main(){
 
-       int a[512], N, k, m; 
+       int  c, k, vr; 
        
        srand(time(0));
-         
-       FILE * f;
-       f = fopen("22.txt", "w"); 
-       printf("Input count number\nN ");
-       scanf ("%d", &N);
-       printf("Numbers at file\n");
        
-       for(int i = 0; i < N; i++){
+       ofstream out("22.txt");
+       
+       cout<<"Input counts number ";
+       cin>>c;
+       
+       for(int i=0; i<c; i++){
                
-           a[i] = rand () % 9;
-           fprintf(f, "%d", a[i]);
-           printf("%d ", a[i]);
+               out<<rand()%9;
+               out<<"\n";
        
-       }   
+       }
        
-      
-       printf("\nNumber of replacement\nk ");
-       scanf("%d", &k );
-       printf("\nValue\nm ");
-       scanf("%d", &m);
+       out.close();
+       
+       int a[c];
+       
+       ifstream in("22.txt");
+
+       for(int i=0; i<c; i++){
+                 
+	     in>>a[i];
+	     cout<<a[i]<<" ";
+
+	     
+	   }
+	   
+	   in.close();
+	   
+	   ofstream out2("22.txt");
+	   
+       cout<<endl<<"Number of replace ";
+       cin>>k;
+       
+       cout<<"Value replace ";
+       cin>>vr;
        
        printf("\nReplace\n----------------\n");       
        
-       for (int i=0; i<N; i++){
+       for (int i=0; i<c; i++){
            
-           if ((i==0) || (i==4) || (i==k-1) || (i==N-1)){
+           
+           if ((i==0) || (i==4) || (i==k-1) || (i==c-1)){
                       
-                 printf ("%d ", m);
-                 fprintf(f, "%d", m );
+                 cout<<vr<<" ";
+                 out2<<vr;
            
            }else{
                  
-                 printf ("%d ", a[i]);
-                 fprintf(f, "%d", a[i]);
+                 cout<<a[i]<<" ";
+                 out<<a[i];
                  
            }
        
        }
        
-       fclose (f);   
+       out2.close();   
        
        getch ();
        return 0;

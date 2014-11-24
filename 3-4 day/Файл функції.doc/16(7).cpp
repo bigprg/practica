@@ -5,10 +5,10 @@
 
 using namespace std;
 
-float func16_7(float x1)
+float func16_7(float x1, float x2, float x3)
 {
 float y;
-      for (float i=-3.14; i<=3.14; i=i+0.5){
+      for (float i=x1; i<=x2; i=i+x3){
                   
           y=(atan(sin(i)))/i;
           printf("%1.2f\n", y);
@@ -18,7 +18,8 @@ float y;
 
 int main(){
     
-    func16_7(-3.14);
+    func16_7(-3.14, 3.14, 0.4);
         
-getch (); 
+getch();
+return 0;
 }
