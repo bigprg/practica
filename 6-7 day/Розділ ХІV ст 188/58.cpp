@@ -153,7 +153,7 @@ int main(){
        
        for(int i=0; i<c1+c2; i++){
                
-               out3<<rand()%9;
+               out3<<c[i];
                out3<<"\n";
                cout<<c[i]<<" ";
        
